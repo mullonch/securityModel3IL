@@ -4,10 +4,16 @@
  - [ ] Injection JS
  - [ ] Brute Force IIS
  - [ ] FTP
- - [ ] File Update
+ - [ ] File Upload
  - [ ] Scan Réseau
  - [ ] Injection CSRF
  - [ ] DDOS
  - [ ] Malware
 
+## Websites
+ - [ ] Injection SQL
+ - [ ] Injection JS
+ - [ ] Injection CSRF
+
 ## Scripts
+ - [X] File upload exploit
