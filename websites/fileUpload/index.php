@@ -13,8 +13,7 @@
                 $uploadAccepted = 1;
 
                 if (isset($_POST["enableSecurity"])) {
-                    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-                    && $imageFileType != "gif" ) {
+                    if ($imageFileType != "jpg" && $imageFileType != "png") {
                         echo "Bad file format";
                         $uploadAccepted = 0;
                     }
@@ -36,5 +35,20 @@
             <input type="checkbox" name="enableSecurity" />Enable security<br/>
             <input type="submit" value="Upload File" name="submit" />
         </form>
+
+        <div>
+            <h2>Files</h2>
+            <?php
+                if ($handle = opendir("./files")) {
+                    while (false !== ($file = readdir($handle))) {
+                        if ($file != "." && $file != "..") {
+                
+                            echo "<img src='./files/$file' alt='$file' width=100/>";
+                        }
+                    }
+                    closedir($handle);
+                }
+            ?>
+        </div>
     </body>
 </html>
