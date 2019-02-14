@@ -1,0 +1,8 @@
+DROP DATABASE injectionJs;
+CREATE DATABASE injectionJs;
+USE injectionJs;
+
+CREATE TABLE message (
+    id INT(100) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    text VARCHAR(500) NOT NULL
+);
