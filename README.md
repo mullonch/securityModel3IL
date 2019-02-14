@@ -7,13 +7,15 @@
  - [ ] File Upload
  - [ ] Scan Réseau
  - [ ] Injection CSRF
- - [ ] DDOS
- - [ ] Malware
+ - [ ] Explore files
+ - [ ] `DDOS - optional`
+ - [ ] `Malware - optional`
 
 ## Websites
  - [ ] Injection SQL
  - [ ] Injection JS
  - [ ] Injection CSRF
+ - [ ] File Upload
 
 ## Scripts
  - [X] File upload exploit
