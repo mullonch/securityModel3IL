@@ -15,7 +15,9 @@
  - [ ] Injection SQL
  - [ ] Injection JS
  - [ ] Injection CSRF
- - [ ] File Upload
+ - [X] File Upload
+ - [ ] Directory exploration
 
 ## Scripts
  - [X] File upload exploit
+ - [ ] Brute force IIS

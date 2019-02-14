@@ -42,7 +42,6 @@
                 if ($handle = opendir("./files")) {
                     while (false !== ($file = readdir($handle))) {
                         if ($file != "." && $file != "..") {
-                
                             echo "<img src='./files/$file' alt='$file' width=100/>";
                         }
                     }
