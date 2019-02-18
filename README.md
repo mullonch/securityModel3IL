@@ -21,3 +21,4 @@
 ## Scripts
  - [X] File upload exploit
  - [ ] Brute force IIS
+ - [ ] Crack password list
