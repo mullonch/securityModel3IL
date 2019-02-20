@@ -12,7 +12,14 @@
 </head>
 
 <body>
-    <h1>Website presentation</h1>
+    
+
+    <?php
+        include_once './views/header.php';
+        include_once './views/main_container.php';
+    ?>
+
+
 
     <script type="application/javascript" src="node_modules/jquery/dist/jquery.min.js" crossorigin="anonymous"></script>
     <script type="application/javascript" src="node_modules/jquery-easing/dist/jquery.easing.1.3.umd.min.js" crossorigin="anonymous"></script>
@@ -21,6 +28,8 @@
     
     <script type="application/javascript" src="js/index.js" crossorigin="anonymous" defer></script>
     <script type="application/javascript" src="js/genetic.js" crossorigin="anonymous" defer></script>
+
+    <script type="application/javascript" src="js/script.js"></script>
 </body>
 
 </html>
