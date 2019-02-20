@@ -1,6 +1,6 @@
 # Security Model 3IL - 2019
 ## Attaques
- - [ ] Injection SQL
+ - [X] Injection SQL
  - [ ] Injection JS
  - [ ] Brute Force IIS
  - [ ] FTP
@@ -12,7 +12,7 @@
  - [ ] `Malware - optional`
 
 ## Websites
- - [ ] Injection SQL
+ - [X] Injection SQL
  - [ ] Injection JS
  - [ ] Injection CSRF
  - [X] File Upload

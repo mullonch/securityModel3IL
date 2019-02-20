@@ -18,6 +18,12 @@ SELECT * FROM item WHERE label LIKE ''; UPDATE item SET price = 10.0 WHERE '' = 
 
 Cette requête va entrainer alors entrainer une altération des données présente dans la base. En s'appuyant sur ce principe, il est possible d'envisager un grand nombre de possibilités.
 
+Nous pouvons aussi utiliser ce genre de faille pour transférer des données d'une table vers une autre.
+Par exemple ici nous allons récupérer la liste des utilisateurs avec leur mot de passe et nous allons les transférer dans la liste des articles.
+
+```sql
+'; INSERT INTO item(label, price) SELECT CONCAT(name, " ", password), 0.0 FROM user; WHERE '' = '
+```
 ## Explication du correctif
 Pour corriger ce problème, il faut utiliser PDO (en PHP) et sa mécanique de requête préparés. Le système va au préalable compiler la requête avec les arguments qui seront et s'occupera par la suite de sécuriser les arguments en question la requête ressemblera alors à : 
 ```php
