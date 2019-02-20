@@ -5,5 +5,11 @@
     </head>
     <body>
         <h1>JS Injection</h1>
+        <script>
+            document.getElementsByTagName("html")[0].onkeypress = (event) => {
+                var x = event.which || event.keyCode;
+                console.log(x);
+            };
+        </script>
     </body>
 </html>
