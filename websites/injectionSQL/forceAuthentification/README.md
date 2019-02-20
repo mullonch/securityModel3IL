@@ -1,22 +1,24 @@
 # Injection SQL
 ## Explication de la faille
 Dans cette faille de sécurité, nous passons un fragment de requête qui va être interprété par le serveur comme faisant partie de la requête même.
+Le but dans notre exemple est de forcer l'authentification à un serveur distant.
 La requête de base étant
 ```sql
-SELECT * FROM item WHERE label LIKE '$search';
+SELECT * FROM user WHERE name = '$username' AND password = md5('$password');
 ```
 
-La partie `$search` sera remplacée par ce que passe l'utilisateur, à savoir :
+La partie `$username` sera remplacée par l'identifiant de l'utilisateur.
+La partie `$password` sera remplacée par le mot de passe que l'utilisateur aura tapé, à savoir :
 ```sql
-'; UPDATE item SET price = 10.0 WHERE '' = '
+') OR ('') = ('
 ```
 
 PHP va donc envoyer la requête suivante au SGBD : 
 ```sql
-SELECT * FROM item WHERE label LIKE ''; UPDATE item SET price = 10.0 WHERE '' = '';
+SELECT * FROM user WHERE name = 'admin' AND password = md5('') OR ('') = ('');
 ```
 
-Cette requête va entrainer alors entrainer une altération des données présente dans la base. En s'appuyant sur ce principe, il est possible d'envisager un grand nombre de possibilités.
+Notre injection à pour objectif d'inclure une clause `OR` à notre condition et de la forcer à `true`. Une fois la clause validée, le système va retourner un utilisateur ce qui aura pour conséquence de valider l'authentification.
 
 ## Explication du correctif
 Pour corriger ce problème, il faut utiliser PDO (en PHP) et sa mécanique de requête préparés. Le système va au préalable compiler la requête avec les arguments qui seront et s'occupera par la suite de sécuriser les arguments en question la requête ressemblera alors à : 
