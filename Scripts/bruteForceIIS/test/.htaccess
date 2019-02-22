@@ -1,0 +1,4 @@
+AuthUserFile .htpasswd
+AuthName "Vous ne passerez pas."
+AuthType Basic
+Require valid-user

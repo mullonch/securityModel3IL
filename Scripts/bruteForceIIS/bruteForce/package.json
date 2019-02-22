@@ -1,0 +1,14 @@
+{
+  "name": "bruteforce",
+  "version": "1.0.0",
+  "description": "Brute force IIS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Flavien PERIER",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
