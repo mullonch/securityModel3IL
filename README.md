@@ -1,8 +1,8 @@
 # Security Model 3IL - 2019
 ## Attaques
  - [X] Injection SQL
- - [ ] Injection JS
- - [ ] Brute Force IIS
+ - [X] Injection JS
+ - [X] Brute Force IIS
  - [ ] FTP
  - [X] File Upload
  - [ ] Scan Réseau
@@ -13,7 +13,7 @@
 
 ## Websites
  - [X] Injection SQL
- - [ ] Injection JS
+ - [X] Injection JS
  - [ ] Injection CSRF
  - [X] File Upload
  - [X] Directory exploration
