@@ -10,7 +10,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Libellé</h5>
                             <p class="card-text">Description</p>
-                            <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                            <a href="#" class="btn btn-secondary m-1">Plus d'infos</a>
+                            <a href="#" class="btn btn-primary m-1">Ajouter au panier</a>
                         </div>
                     </div>
                 </div>
