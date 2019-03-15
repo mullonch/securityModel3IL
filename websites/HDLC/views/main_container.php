@@ -6,8 +6,11 @@
 
                 <div class="col-sm-3">
                     <div class="card">
+                        <img class="card-img-top" src="images/index.svg" alt="Card image cap">
                         <div class="card-body">
-                            This is some text within a card body.
+                            <h5 class="card-title">Libellé</h5>
+                            <p class="card-text">Description</p>
+                            <a href="#" class="btn btn-primary">Ajouter au panier</a>
                         </div>
                     </div>
                 </div>
