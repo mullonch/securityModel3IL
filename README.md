@@ -1,20 +1,20 @@
 # Security Model 3IL - 2019
 ## Attaques
+ - [ ] Injection CSRF
  - [X] Injection SQL
  - [X] Injection JS
  - [X] Brute Force IIS
- - [ ] FTP
+ - [ ] Brute Force FTP
  - [X] File Upload
  - [ ] Scan Réseau
- - [ ] Injection CSRF
  - [X] Directory exploration
  - [ ] `DDOS - optional`
  - [ ] `Malware - optional`
 
 ## Websites
+ - [ ] Injection CSRF
  - [X] Injection SQL
  - [X] Injection JS
- - [ ] Injection CSRF
  - [X] File Upload
  - [X] Directory exploration
 
