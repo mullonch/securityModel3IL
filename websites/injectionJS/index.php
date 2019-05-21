@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
-    $_pdo = new PDO ("mysql:host=127.0.0.1;dbname=injectionJs;charset=utf8", "root", "");
+    require_once("../configuration.php");
+    $_pdo = getPDO("injectionJs");
 ?>
 <html>
     <head>
