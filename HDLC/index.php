@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+    $_pdo = new PDO ("mysql:host=127.0.0.1;dbname=injectionSQL;charset=utf8", "root", "");
+?>
 <html lang="en">
 
 <head>
