@@ -1,0 +1,16 @@
+{
+  "name": "bruteforce",
+  "version": "1.0.0",
+  "description": "Buffer overflow",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "gcc auth.cc -o auth.exe"
+  },
+  "author": "Flavien PERIER",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
