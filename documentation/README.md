@@ -1,13 +1,26 @@
 # Documentation
 
-## Installation
+## Dépendances
 
+### Client
 - Installer les programmes: 
   - [git](https://git-scm.com/)
   - [nodejs](https://nodejs.org/en/)
   - [java](https://www.java.com/fr/)
 
+### Serveur
+- Installer les programmes: 
+  - [git](https://git-scm.com/)
+  - [nodejs](https://nodejs.org/en/)
+  - [java](https://www.java.com/fr/)
+  - [IIS](https://www.iis.net/)
+
 ## Livrables
+
+Liste des livrables du projet dans 3 cathégories :
+- Websites
+- Scripts
+- Servers
 
 ### Websites
 
@@ -24,5 +37,12 @@
 
 ### Servers
 
-- [X] [buffer-overflow](https://github.com/flavien-perier/securityModel3IL/tree/master/Server/buffer-overflow)
-- [X] [keylogger](https://github.com/flavien-perier/securityModel3IL/tree/master/Server/keylogger)
+- [X] [buffer-overflow](https://github.com/flavien-perier/securityModel3IL/tree/master/servers/buffer-overflow)
+- [X] [keylogger](https://github.com/flavien-perier/securityModel3IL/tree/master/servers/keylogger)
+
+## Installation
+
+### Client
+
+### Serveur
+
