@@ -4,7 +4,8 @@ import java.io.File
 import java.lang.Exception
 
 fun main(args: Array<String>) {
-    val cryptMessage = CryptMessage()
+    val publicKey = EncryptMessage.getPublic(object {}.javaClass.getResource("public_key").readBytes())
+    val cryptMessage = EncryptMessage(publicKey, null)
 
     File("D:/test").walk().forEach {
         try {

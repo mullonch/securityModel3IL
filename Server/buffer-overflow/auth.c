@@ -14,8 +14,6 @@ void main(int argc, char *argv[]) {
     strcpy(username, argv[1]);
     strcpy(password, argv[2]);
 
-    printf("(%x: %s), (%x: %s) : %x\n", &username, username, &password, password);
-
     for (int i=0; i<31; i++)
         printf("%c", mem[i]);
     printf("\n");

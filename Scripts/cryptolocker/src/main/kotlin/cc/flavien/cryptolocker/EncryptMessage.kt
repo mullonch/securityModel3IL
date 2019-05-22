@@ -5,8 +5,16 @@ import java.security.KeyPairGenerator
 import java.security.PrivateKey
 import java.security.PublicKey
 import javax.crypto.Cipher
+import java.security.KeyFactory
+import java.security.spec.X509EncodedKeySpec
+import java.io.File
+import java.nio.file.Files
+import java.security.spec.PKCS8EncodedKeySpec
 
-class CryptMessage(
+
+
+
+class EncryptMessage(
         var publicKey: PublicKey?,
         var privateKey: PrivateKey?
 ) {
@@ -36,6 +44,18 @@ class CryptMessage(
 
     companion object {
         const val CRYPTO_METHOD = "RSA"
-        const val CRYPTO_BITS = 4096
+        const val CRYPTO_BITS = 2048
+
+        fun getPrivate(keyBytes: ByteArray): PrivateKey {
+            val spec = PKCS8EncodedKeySpec(keyBytes)
+            val kf = KeyFactory.getInstance(CRYPTO_METHOD)
+            return kf.generatePrivate(spec)
+        }
+
+        fun getPublic(keyBytes: ByteArray): PublicKey {
+            val spec = X509EncodedKeySpec(keyBytes)
+            val kf = KeyFactory.getInstance(CRYPTO_METHOD)
+            return kf.generatePublic(spec)
+        }
     }
 }

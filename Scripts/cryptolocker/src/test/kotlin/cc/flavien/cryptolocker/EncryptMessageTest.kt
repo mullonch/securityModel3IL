@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
 
-class CryptMessageTest {
+class EncryptMessageTest {
     @Test
     fun `should crypt and decrypt message`() {
-        val cryptMessage: CryptMessage = CryptMessage()
+        val cryptMessage: EncryptMessage = EncryptMessage()
         val stringValue = "my message"
 
         val encryptedMessage = cryptMessage.encrypt(stringValue.toByteArray())
