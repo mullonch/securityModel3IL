@@ -36,7 +36,13 @@ def WPScan():
 	url = ""
 	print("Entrer l'url que vous voulez scanner : ")
 	url = raw_input()
-	os.system("wpscan --url "+url)
+	os.system("wpscan --random-user-agent --url "+url)
+
+def VulnScan():
+	url = ""
+	print("Entrer l'url que vous voulez scanner : ")
+	url = raw_input()
+	os.system("nikto -h "+url)	
 	
 def Main():
 	print("______________________________________________________________________________________")
@@ -62,6 +68,7 @@ def Main():
 		print("*6* CrackPassword")
 		print("*7* Scan reseau")
 		print("*8* Scan Wordpress website")
+		print("*9* Scan website vulnerabilities")
 		print("*0* Quitter")	
 		print("Veuillez taper le numero de l\'attaque a executer : ")
 		choix = input()
@@ -73,6 +80,8 @@ def Main():
 			webbrowser.open("https://github.com/flavien-perier/securityModel3IL")
 		elif int(choix) == 8:
 			WPScan()
+		elif int(choix) == 9:
+			VulnScan()
 
 
 Main()
