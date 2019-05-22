@@ -32,6 +32,11 @@ def scanReseau():
 		elif int(choix) == 3:
 			pass
 	
+def WPScan():
+	url = ""
+	print("Entrer l'url que vous voulez scanner : ")
+	url = raw_input()
+	os.system("wpscan --url "+url)
 	
 def Main():
 	print("______________________________________________________________________________________")
@@ -56,6 +61,7 @@ def Main():
 		print("*5* Directory exploration")
 		print("*6* CrackPassword")
 		print("*7* Scan reseau")
+		print("*8* Scan Wordpress website")
 		print("*0* Quitter")	
 		print("Veuillez taper le numero de l\'attaque a executer : ")
 		choix = input()
@@ -65,6 +71,8 @@ def Main():
 			scanReseau()
 		elif int(choix) == 1:
 			webbrowser.open("https://github.com/flavien-perier/securityModel3IL")
+		elif int(choix) == 8:
+			WPScan()
 
 
 Main()
