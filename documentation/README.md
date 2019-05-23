@@ -24,21 +24,21 @@ Liste des livrables du projet dans 3 cathégories :
 
 ### Websites
 
-- [X] [directoryExploration](https://github.com/flavien-perier/securityModel3IL/tree/master/websites/directoryExploration)
-- [X] [fileUpload](https://github.com/flavien-perier/securityModel3IL/tree/master/websites/fileUpload)
-- [X] [injectionJS](https://github.com/flavien-perier/securityModel3IL/tree/master/websites/injectionJS)
-- [X] [injectionSQL](https://github.com/flavien-perier/securityModel3IL/tree/master/websites/injectionSQL)
+- [X] [directoryExploration](../websites/directoryExploration)
+- [X] [fileUpload](../websites/fileUpload)
+- [X] [injectionJS](../websites/injectionJS)
+- [X] [injectionSQL](../websites/injectionSQL)
 
 ### Scripts
 
-- [X] [bruteForceIIS](https://github.com/flavien-perier/securityModel3IL/tree/master/Scripts/bruteForceIIS)
-- [X] [cryptoLocker](https://github.com/flavien-perier/securityModel3IL/tree/master/Scripts/cryptolocker)
-- [X] [fileUpload](https://github.com/flavien-perier/securityModel3IL/tree/master/Scripts/fileUpload)
+- [X] [bruteForceIIS](../Scripts/bruteForceIIS)
+- [X] [cryptoLocker](../Scripts/cryptolocker)
+- [X] [fileUpload](../Scripts/fileUpload)
 
 ### Servers
 
-- [X] [buffer-overflow](https://github.com/flavien-perier/securityModel3IL/tree/master/servers/buffer-overflow)
-- [X] [keylogger](https://github.com/flavien-perier/securityModel3IL/tree/master/servers/keylogger)
+- [X] [buffer-overflow](../servers/buffer-overflow)
+- [X] [keylogger](../servers/keylogger)
 
 ## Installation
 
