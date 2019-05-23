@@ -11,9 +11,6 @@ import java.io.File
 import java.nio.file.Files
 import java.security.spec.PKCS8EncodedKeySpec
 
-
-
-
 class EncryptMessage(
         var publicKey: PublicKey?,
         var privateKey: PrivateKey?
