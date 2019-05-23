@@ -1,1 +1,1 @@
-# Cryptolocker
+# CryptoLocker

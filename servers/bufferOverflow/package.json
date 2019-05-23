@@ -1,5 +1,5 @@
 {
-  "name": "bruteforce",
+  "name": "buffer-overflow",
   "version": "1.0.0",
   "description": "Buffer overflow",
   "main": "index.js",

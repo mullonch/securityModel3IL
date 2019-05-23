@@ -37,7 +37,7 @@ Liste des livrables du projet dans 3 cathégories :
 
 ### Servers
 
-- [X] [buffer-overflow](../servers/buffer-overflow)
+- [X] [bufferOverflow](../servers/bufferOverflow)
 - [X] [keylogger](../servers/keylogger)
 
 ## Installation
