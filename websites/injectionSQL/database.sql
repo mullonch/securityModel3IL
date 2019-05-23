@@ -1,4 +1,4 @@
-DROP DATABASE injectionSQL;
+DROP DATABASE IF EXISTS injectionSQL;
 CREATE DATABASE injectionSQL;
 USE injectionSQL;
 

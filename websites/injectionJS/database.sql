@@ -1,4 +1,4 @@
-DROP DATABASE injectionJs;
+DROP DATABASE IF EXISTS injectionJs;
 CREATE DATABASE injectionJs;
 USE injectionJs;
 
