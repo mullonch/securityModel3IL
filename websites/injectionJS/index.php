@@ -24,9 +24,9 @@
 
             foreach ($results as $r) {
                 if (isset($_GET["enableSecurity"])) {
-                    echo "<li>Message: Object : ".htmlspecialchars($r[1], ENT_QUOTES)."</li>";
+                    echo "<li>Message: ".htmlspecialchars($r[1], ENT_QUOTES)."</li>";
                 } else {
-                    echo "<li>Message: Object : ".$r[1]."</li>";
+                    echo "<li>Message: ".$r[1]."</li>";
                 }
             }
         ?>
