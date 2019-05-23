@@ -1,5 +1,6 @@
 package cc.flavien.cryptolocker
 
+import java.io.FileOutputStream
 import java.security.KeyPair
 import java.security.KeyPairGenerator
 import java.security.PrivateKey
@@ -7,8 +8,6 @@ import java.security.PublicKey
 import javax.crypto.Cipher
 import java.security.KeyFactory
 import java.security.spec.X509EncodedKeySpec
-import java.io.File
-import java.nio.file.Files
 import java.security.spec.PKCS8EncodedKeySpec
 
 class EncryptMessage(
@@ -37,6 +36,16 @@ class EncryptMessage(
         cipher.init(Cipher.DECRYPT_MODE, publicKey)
 
         return cipher.doFinal(input)
+    }
+
+    fun savePair() {
+        val outPrivate = FileOutputStream("private_key")
+        outPrivate.write(privateKey!!.encoded)
+        outPrivate.close()
+
+        val outPublic = FileOutputStream("public_key")
+        outPublic.write(publicKey!!.encoded)
+        outPublic.close()
     }
 
     companion object {
