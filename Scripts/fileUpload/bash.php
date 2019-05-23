@@ -73,7 +73,6 @@
 				echo nl2br(htmlspecialchars($_SESSION["reponse"][$i]), ENT_QUOTES)."</br>";
 			}
 			echo "</div>";
-
 		?>
 		<form action='' method='POST'>
 			<input id="commande" name='commande' placeholder="Entrez la commande bash" autofocus>
