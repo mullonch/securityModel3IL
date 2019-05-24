@@ -4,5 +4,9 @@
     define('DB_PASSWORD', '');
 
     function getPDO($dbname) {
-        return new PDO("mysql:host=".DB_HOST.";dbname=".$dbname.";charset=utf8", DB_USER, DB_PASSWORD);
+        if (!empty($dbname)) {
+            return new PDO("mysql:host=".DB_HOST.";dbname=".$dbname.";charset=utf8", DB_USER, DB_PASSWORD);
+        } else {
+            return new PDO("mysql:host=".DB_HOST.";charset=utf8", DB_USER, DB_PASSWORD);
+        }
     }
