@@ -14,10 +14,6 @@ void main(int argc, char *argv[]) {
     strcpy(username, argv[1]);
     strcpy(password, argv[2]);
 
-    for (int i=0; i<31; i++)
-        printf("%c", mem[i]);
-    printf("\n");
-
     if (argc == 3 && strcmp(username, "admin") == 0 && strcmp(password, "password") == 0)
         *status = 'T';
 
