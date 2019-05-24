@@ -20,11 +20,6 @@
 
 ## Livrables
 
-Liste des livrables du projet dans 3 cathégories :
-- Websites
-- Scripts
-- Servers
-
 ### Websites
 
 - [X] [directoryExploration](../websites/directoryExploration)
