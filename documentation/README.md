@@ -3,17 +3,20 @@
 ## Dépendances
 
 ### Client
+
 - Installer les programmes: 
   - [git](https://git-scm.com/)
   - [nodejs](https://nodejs.org/en/)
   - [java](https://www.java.com/fr/)
 
 ### Serveur
+
 - Installer les programmes: 
+  - [IIS](https://www.iis.net/)
+  - [mysql](https://www.mysql.com/fr/)
   - [git](https://git-scm.com/)
   - [nodejs](https://nodejs.org/en/)
   - [java](https://www.java.com/fr/)
-  - [IIS](https://www.iis.net/)
 
 ## Livrables
 
@@ -39,10 +42,4 @@ Liste des livrables du projet dans 3 cathégories :
 
 - [X] [bufferOverflow](../servers/bufferOverflow)
 - [X] [keylogger](../servers/keylogger)
-
-## Installation
-
-### Client
-
-### Serveur
 
