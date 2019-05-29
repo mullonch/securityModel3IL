@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>File Upload</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
         <h1>File Upload</h1>  

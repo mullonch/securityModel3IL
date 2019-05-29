@@ -6,6 +6,7 @@
 <html>
     <head>
         <title>JS Injection</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
         <h1>JS Injection</h1>
